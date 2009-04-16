@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true" namespace="EZTutor.Data.Local" assembly="EZTutor.Data.Local">
+	<class name="Slides,Data.Local" table="Slides" lazy="true">
+
+		<!-- Primary Key(s) -->
+		<id name="Slideid" column="SlideID" type="Guid">
+			<generator class="assigned"/>
+		</id>
+		
+		<!-- Properties -->
+		<property column="SlideName" type="string" name="SlideName" not-null="true" />
+    <many-to-one name="Lectureid" cascade="none" column="LectureID" not-null="true" />
+    <many-to-one name="Topicid" cascade="none" column="TopicID" not-null="true" />
+		
+	</class>
+</hibernate-mapping>
