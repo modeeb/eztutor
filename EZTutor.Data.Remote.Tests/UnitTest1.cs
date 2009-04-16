@@ -19,9 +19,12 @@ namespace EZTutor.Data.Remote.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            ISession session = new Provider().GetSession();
+            Provider provider = new Provider();
 
-            IList<Topics> topics = session.CreateQuery("from topics").List<Topics>();
+            provider.OpenSession();
+
+            IList<Topics> topics = provider.OpenSession().CreateQuery("from topics").List<Topics>();
+            //TopicsCollection topics = new TopicsCollection();
         }
     }
 }

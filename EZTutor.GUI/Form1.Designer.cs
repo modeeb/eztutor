@@ -1,4 +1,4 @@
-﻿namespace EZTutor
+﻿namespace EZTutor.GUI
 {
     partial class Form1
     {
@@ -70,4 +70,3 @@
 
     }
 }
-

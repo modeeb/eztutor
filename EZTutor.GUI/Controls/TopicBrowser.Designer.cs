@@ -1,4 +1,5 @@
-﻿namespace EZTutor.GUI.Controls
+﻿using EZTutor.Data.Remote.Datasets;
+namespace EZTutor.GUI.Controls
 {
     partial class TopicBrowser
     {
@@ -28,34 +29,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.topicsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eztutorDataSet = new EZTutor.GUI.eztutorDataSet();
-            this.topicsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.topicsTableAdapter = new EZTutor.GUI.eztutorDataSetTableAdapters.TopicsTableAdapter();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            ((System.ComponentModel.ISupportInitialize)(this.topicsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eztutorDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topicsBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // topicsBindingSource
-            // 
-            this.topicsBindingSource.DataSource = typeof(EZTutor.Data.Remote.Entities.Topics);
-            // 
-            // eztutorDataSet
-            // 
-            this.eztutorDataSet.DataSetName = "eztutorDataSet";
-            this.eztutorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // topicsBindingSource1
-            // 
-            this.topicsBindingSource1.DataMember = "Topics";
-            this.topicsBindingSource1.DataSource = this.eztutorDataSet;
-            // 
-            // topicsTableAdapter
-            // 
-            this.topicsTableAdapter.ClearBeforeFill = true;
             // 
             // treeView1
             // 
@@ -72,19 +47,13 @@
             this.Name = "TopicBrowser";
             this.Size = new System.Drawing.Size(412, 236);
             this.Load += new System.EventHandler(this.TopicBrowser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.topicsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eztutorDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.topicsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.BindingSource topicsBindingSource;
-        private System.Windows.Forms.BindingSource topicsBindingSource1;
-        private eztutorDataSet eztutorDataSet;
-        private EZTutor.GUI.eztutorDataSetTableAdapters.TopicsTableAdapter topicsTableAdapter;
+        private EZTutorDataSet eztutorDataSet;
         private System.Windows.Forms.TreeView treeView1;
 
     }

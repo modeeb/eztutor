@@ -47,18 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Provider.cs" />
-    <Compile Include="Entities\EZTutor.Data.Local.Entities.Lectures.cs" />
-    <Compile Include="Entities\EZTutor.Data.Local.Entities.Slides.cs" />
-    <Compile Include="Entities\EZTutor.Data.Local.Entities.Topics.cs" />
+    <Compile Include="Entities\Lectures.cs" />
+    <Compile Include="Entities\Slides.cs" />
+    <Compile Include="Entities\Topics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Mappings\EZTutor.Data.Local.Entities.Lectures.hbm.xml" />
-    <Content Include="Mappings\EZTutor.Data.Local.Entities.Slides.hbm.xml" />
-    <Content Include="Mappings\EZTutor.Data.Local.Entities.Topics.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Lectures.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Slides.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Topics.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\data.db" />

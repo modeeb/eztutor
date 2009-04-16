@@ -6,6 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using EZTutor.Data.Remote.Datasets;
+using EZTutor.Data.Remote.Datasets.EZTutorDataSetTableAdapters;
 using EZTutor.Data.Remote.Entities;
 using EZTutor.Data.Remote.Domain;
 using NHibernate;
@@ -21,17 +23,19 @@ namespace EZTutor.GUI.Controls
 
         private void TopicBrowser_Load(object sender, EventArgs e)
         {
-            Provider provider = new Provider();
+            //Provider provider = new Provider();
             
-            ISession session = provider.GetSession();
+            //provider.OpenSession();
 
             //var topics = session.CreateCriteria(typeof(Topics)).List<Topics>();
 
-            eztutorDataSet.TopicsDataTable topics = topicsTableAdapter.GetData();
+            TopicsTableAdapter topicsTableAdapter = new TopicsTableAdapter();
+
+            EZTutorDataSet.TopicsDataTable topics = topicsTableAdapter.GetData();
             //dataGridView1.DataSource = topicsTableAdapter.GetData();
 
             TreeNode parent = treeView1.Nodes.Add("Topics");
-            foreach (eztutorDataSet.TopicsRow topic in topics)
+            foreach (EZTutorDataSet.TopicsRow topic in topics)
             {
                 parent.Nodes.Add(topic.TopicName);
             }
