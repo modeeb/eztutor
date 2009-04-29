@@ -1,7 +1,7 @@
 ﻿using EZTutor.Data.Remote.Datasets;
 namespace EZTutor.GUI.Controls
 {
-    partial class TopicBrowser
+    partial class LectureBrowser
     {
         /// <summary> 
         /// Required designer variable.
@@ -43,14 +43,14 @@ namespace EZTutor.GUI.Controls
             this.treeView1.TabIndex = 0;
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
-            // TopicBrowser
+            // LectureBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.treeView1);
-            this.Name = "TopicBrowser";
+            this.Name = "LectureBrowser";
             this.Size = new System.Drawing.Size(412, 236);
-            this.Load += new System.EventHandler(this.TopicBrowser_Load);
+            this.Load += new System.EventHandler(this.LectureBrowser_Load);
             this.ResumeLayout(false);
 
         }

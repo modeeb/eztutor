@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EZTutor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("EZ Tutor")]
+[assembly: AssemblyDescription("Teaching Data Structure Concepts with Algorithm Efficiency through Multimedia")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Thebe Technology")]
-[assembly: AssemblyProduct("EZTutor")]
-[assembly: AssemblyCopyright("Copyright © Thebe Technology 2009")]
+[assembly: AssemblyCompany("Cairo University, ISSR")]
+[assembly: AssemblyProduct("EZ Tutor")]
+[assembly: AssemblyCopyright("Copyright © ISSR, Cairo University 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

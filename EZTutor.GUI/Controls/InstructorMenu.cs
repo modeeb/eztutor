@@ -11,13 +11,13 @@ using EZTutor.GUI.Enums;
 
 namespace EZTutor.GUI.Controls
 {
-    public partial class StudentMenu : CollapsedControl
+    public partial class InstructorMenu : CollapsedControl
     {
         public delegate void MenuItemClickedHandler(object sender, MenuArgs args);
 
         public MenuItemClickedHandler MenuItemClicked;
 
-        public StudentMenu()
+        public InstructorMenu()
         {
             InitializeComponent();
         }

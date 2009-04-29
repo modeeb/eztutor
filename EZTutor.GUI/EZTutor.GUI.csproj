@@ -43,23 +43,68 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arguments\MenuArgs.cs" />
+    <Compile Include="Arguments\SecurityArgs.cs" />
+    <Compile Include="Controls\CollapsedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CollapsedControl.Designer.cs">
+      <DependentUpon>CollapsedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DisplayLL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DisplayLL.Designer.cs">
+      <DependentUpon>DisplayLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LectureBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LectureBrowser.Designer.cs">
+      <DependentUpon>LectureBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InstructorMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InstructorMenu.Designer.cs">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LL.Designer.cs">
+      <DependentUpon>LL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RetrieveLL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RetrieveLL.Designer.cs">
+      <DependentUpon>RetrieveLL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Slides.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Slides.designer.cs">
+      <DependentUpon>Slides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\FormType.cs" />
+    <Compile Include="Enums\UserType.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Home.designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -91,14 +136,49 @@
     <Compile Include="Controls\MainBrowser.designer.cs">
       <DependentUpon>MainBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\DisplayLL.resx">
+      <DependentUpon>DisplayLL.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\LectureBrowser.resx">
+      <DependentUpon>LectureBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InstructorMenu.resx">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LL.resx">
+      <DependentUpon>LL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RetrieveLL.resx">
+      <DependentUpon>RetrieveLL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Slides.resx">
+      <DependentUpon>Slides.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
@@ -121,6 +201,15 @@
       <DependentUpon>MainBrowser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EZTutor.Data.Remote\EZTutor.Data.Remote.csproj">
@@ -131,6 +220,24 @@
       <Project>{5909BFE7-93CF-4E5F-BE22-6293368AF01D}</Project>
       <Name>NHibernate-2.0</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AgentObjects">
+      <Guid>{F5BE8BC2-7DE6-11D0-91FE-00C04FD701A5}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAgentObjects">
+      <Guid>{F5BE8BC2-7DE6-11D0-91FE-00C04FD701A5}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

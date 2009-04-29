@@ -72,7 +72,7 @@ namespace EZTutor.GUI.Forms
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(152, 28);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Forget Password";
+            this.button3.Text = "Forgot Password";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -140,7 +140,7 @@ namespace EZTutor.GUI.Forms
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(178, 23);
             this.button4.TabIndex = 9;
-            this.button4.Text = "Contact Istractor";
+            this.button4.Text = "Contact Instructor";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Login

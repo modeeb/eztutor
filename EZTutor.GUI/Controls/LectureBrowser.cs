@@ -10,24 +10,24 @@ using EZTutor.Data.Remote.Datasets;
 using EZTutor.Data.Remote.Datasets.EZTutorDataSetTableAdapters;
 using EZTutor.Data.Remote.Entities;
 using EZTutor.Data.Remote.Domain;
-using EZTutor.GUI.Arguments;
 using EZTutor.GUI.Enums;
 using NHibernate;
+using EZTutor.GUI.Arguments;
 
 namespace EZTutor.GUI.Controls
 {
-    public partial class TopicBrowser : CollapsedControl
+    public partial class LectureBrowser : CollapsedControl
     {
         public delegate void NodeClickedHandler(object sender, MenuArgs args);
 
         public NodeClickedHandler NodeClicked;
 
-        public TopicBrowser()
+        public LectureBrowser()
         {
             InitializeComponent();
         }
 
-        private void TopicBrowser_Load(object sender, EventArgs e)
+        private void LectureBrowser_Load(object sender, EventArgs e)
         {
             //Provider provider = new Provider();
             
@@ -35,15 +35,15 @@ namespace EZTutor.GUI.Controls
 
             //var topics = session.CreateCriteria(typeof(Topics)).List<Topics>();
 
-            TopicsTableAdapter topicsTableAdapter = new TopicsTableAdapter();
+            LecturesTableAdapter lecturesTableAdapter = new LecturesTableAdapter();
 
-            EZTutorDataSet.TopicsDataTable topics = topicsTableAdapter.GetData();
+            EZTutorDataSet.LecturesDataTable lectures = lecturesTableAdapter.GetData();
             //dataGridView1.DataSource = topicsTableAdapter.GetData();
 
-            TreeNode parent = treeView1.Nodes.Add("Topics");
-            foreach (EZTutorDataSet.TopicsRow topic in topics)
+            TreeNode parent = treeView1.Nodes.Add("Lectures");
+            foreach (EZTutorDataSet.LecturesRow topic in lectures)
             {
-                parent.Nodes.Add(topic.TopicName);
+                parent.Nodes.Add(topic.LectureName);
             }
             treeView1.ExpandAll();
         }
