@@ -3,9 +3,9 @@ using System.Collections;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using EZTutor.Data.Remote.Domain;
+//using EZTutor.Data.Remote.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NHibernate;
+//using NHibernate;
 using EZTutor.Data.Remote.Entities;
 
 namespace EZTutor.Data.Remote.Tests
@@ -19,11 +19,11 @@ namespace EZTutor.Data.Remote.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            Provider provider = new Provider();
+            //Provider provider = new Provider();
 
-            provider.OpenSession();
+            //provider.OpenSession();
 
-            IList<Topics> topics = provider.OpenSession().CreateQuery("from topics").List<Topics>();
+            //IList<Topics> topics = provider.OpenSession().CreateQuery("from topics").List<Topics>();
             //TopicsCollection topics = new TopicsCollection();
         }
     }

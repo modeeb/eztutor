@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using EZTutor.GUI.Arguments;
-using EZTutor.GUI.Controls;
+using EZTutor.GUI.Controls.Admin;
+using EZTutor.GUI.Controls.Browsers;
+using EZTutor.GUI.Controls.Menus;
 using EZTutor.GUI.Enums;
 
 namespace EZTutor.GUI.Forms
@@ -52,13 +54,11 @@ namespace EZTutor.GUI.Forms
             {
                 case FormType.Home:
                     MainBrowser browser = new MainBrowser();
-                    panel1.Controls.Add(browser);
-                    browser.Dock = DockStyle.Fill;
+                    contentPanel.Controls.Add(browser);
                     break;
                 case FormType.Profile:
                     Profile profile = new Profile();
-                    panel1.Controls.Add(profile);
-                    profile.Dock = DockStyle.Fill;
+                    contentPanel.Controls.Add(profile);
                     break;
             }
         }

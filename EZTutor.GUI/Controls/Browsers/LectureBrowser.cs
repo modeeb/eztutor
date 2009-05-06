@@ -9,12 +9,11 @@ using System.Windows.Forms;
 using EZTutor.Data.Remote.Datasets;
 using EZTutor.Data.Remote.Datasets.EZTutorDataSetTableAdapters;
 using EZTutor.Data.Remote.Entities;
-using EZTutor.Data.Remote.Domain;
+//using EZTutor.Data.Remote.Domain;
 using EZTutor.GUI.Enums;
-using NHibernate;
 using EZTutor.GUI.Arguments;
 
-namespace EZTutor.GUI.Controls
+namespace EZTutor.GUI.Controls.Browsers
 {
     public partial class LectureBrowser : CollapsedControl
     {

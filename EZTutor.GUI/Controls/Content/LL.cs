@@ -6,9 +6,9 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using AgentObjects;  
+using AgentObjects;
 
-namespace Project
+namespace EZTutor.GUI.Controls.Content
 {
     public partial class LL : UserControl 
     {

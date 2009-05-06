@@ -1,6 +1,6 @@
-﻿namespace EZTutor.GUI.Controls
+﻿namespace EZTutor.GUI.Controls.Menus
 {
-    partial class StudentMenu
+    partial class InstructorMenu
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,14 +37,17 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+                                                                                  | System.Windows.Forms.AnchorStyles.Left)
+                                                                                 | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.flowLayoutPanel1.Controls.Add(this.linkLabel1);
             this.flowLayoutPanel1.Controls.Add(this.linkLabel2);
@@ -52,11 +55,14 @@
             this.flowLayoutPanel1.Controls.Add(this.linkLabel4);
             this.flowLayoutPanel1.Controls.Add(this.linkLabel5);
             this.flowLayoutPanel1.Controls.Add(this.linkLabel6);
+            this.flowLayoutPanel1.Controls.Add(this.linkLabel7);
+            this.flowLayoutPanel1.Controls.Add(this.linkLabel8);
+            this.flowLayoutPanel1.Controls.Add(this.linkLabel9);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(170, 184);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(170, 224);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // linkLabel1
@@ -109,10 +115,10 @@
             this.linkLabel4.Location = new System.Drawing.Point(4, 76);
             this.linkLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(88, 16);
+            this.linkLabel4.Size = new System.Drawing.Size(84, 16);
             this.linkLabel4.TabIndex = 3;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Ask Questions";
+            this.linkLabel4.Text = "Add Students";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel5
@@ -123,10 +129,10 @@
             this.linkLabel5.Location = new System.Drawing.Point(4, 100);
             this.linkLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(110, 16);
+            this.linkLabel5.Size = new System.Drawing.Size(107, 16);
             this.linkLabel5.TabIndex = 4;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Contact Instructor";
+            this.linkLabel5.Text = "Manage Students";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel6
@@ -137,10 +143,10 @@
             this.linkLabel6.Location = new System.Drawing.Point(4, 124);
             this.linkLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(102, 16);
+            this.linkLabel6.Size = new System.Drawing.Size(98, 16);
             this.linkLabel6.TabIndex = 5;
             this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Answer Exercise";
+            this.linkLabel6.Text = "Upload Exercise";
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // label2
@@ -151,9 +157,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label2.Location = new System.Drawing.Point(71, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Student";
+            this.label2.Text = "Instructor";
             // 
             // label1
             // 
@@ -166,7 +172,46 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome  ";
             // 
-            // StudentMenu
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel7.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel7.Location = new System.Drawing.Point(4, 148);
+            this.linkLabel7.Margin = new System.Windows.Forms.Padding(4);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(95, 16);
+            this.linkLabel7.TabIndex = 6;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "Upload Content";
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel8.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel8.Location = new System.Drawing.Point(4, 172);
+            this.linkLabel8.Margin = new System.Windows.Forms.Padding(4);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(111, 16);
+            this.linkLabel8.TabIndex = 7;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "Answer Questions";
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel9.Location = new System.Drawing.Point(4, 196);
+            this.linkLabel9.Margin = new System.Windows.Forms.Padding(4);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(99, 16);
+            this.linkLabel9.TabIndex = 8;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Reply Messages";
+            // 
+            // InstructorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,8 +219,8 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "StudentMenu";
-            this.Size = new System.Drawing.Size(184, 223);
+            this.Name = "InstructorMenu";
+            this.Size = new System.Drawing.Size(184, 263);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -194,6 +239,9 @@
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel9;
 
     }
 }

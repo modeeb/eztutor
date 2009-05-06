@@ -6,7 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EZTutor.GUI.Controls
+namespace EZTutor.GUI.Controls.Admin
 {
     public partial class Profile : UserControl
     {

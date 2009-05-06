@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7F62BEA4-6DC1-424F-960C-C63D060A28DA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EZTutor.GUI</RootNamespace>
     <AssemblyName>EZTutor.GUI</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>EZTutor.GUI.Program</StartupObject>
   </PropertyGroup>
@@ -33,15 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -50,46 +43,58 @@
   <ItemGroup>
     <Compile Include="Arguments\MenuArgs.cs" />
     <Compile Include="Arguments\SecurityArgs.cs" />
+    <Compile Include="Controls\Browsers\FreeSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Browsers\FreeSearch.Designer.cs">
+      <DependentUpon>FreeSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CollapsedControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CollapsedControl.Designer.cs">
       <DependentUpon>CollapsedControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DisplayLL.cs">
+    <Compile Include="Controls\Content\DisplayLL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\DisplayLL.Designer.cs">
+    <Compile Include="Controls\Content\DisplayLL.Designer.cs">
       <DependentUpon>DisplayLL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\LectureBrowser.cs">
+    <Compile Include="Controls\Browsers\LectureBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\LectureBrowser.Designer.cs">
+    <Compile Include="Controls\Browsers\LectureBrowser.Designer.cs">
       <DependentUpon>LectureBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\InstructorMenu.cs">
+    <Compile Include="Controls\Content\LinkedList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\InstructorMenu.Designer.cs">
+    <Compile Include="Controls\Content\LinkedList.Designer.cs">
+      <DependentUpon>LinkedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menus\InstructorMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Menus\InstructorMenu.Designer.cs">
       <DependentUpon>InstructorMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\LL.cs">
+    <Compile Include="Controls\Content\LL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\LL.Designer.cs">
+    <Compile Include="Controls\Content\LL.Designer.cs">
       <DependentUpon>LL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\RetrieveLL.cs">
+    <Compile Include="Controls\Content\RetrieveLL.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\RetrieveLL.Designer.cs">
+    <Compile Include="Controls\Content\RetrieveLL.Designer.cs">
       <DependentUpon>RetrieveLL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Slides.cs">
+    <Compile Include="Controls\Content\Slides.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Slides.designer.cs">
+    <Compile Include="Controls\Content\Slides.designer.cs">
       <DependentUpon>Slides.cs</DependentUpon>
     </Compile>
     <Compile Include="Enums\FormType.cs" />
@@ -112,28 +117,28 @@
     <Compile Include="Forms\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Profile.cs">
+    <Compile Include="Controls\Admin\Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Profile.designer.cs">
+    <Compile Include="Controls\Admin\Profile.designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\StudentMenu.cs">
+    <Compile Include="Controls\Menus\StudentMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\StudentMenu.Designer.cs">
+    <Compile Include="Controls\Menus\StudentMenu.Designer.cs">
       <DependentUpon>StudentMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TopicBrowser.cs">
+    <Compile Include="Controls\Browsers\TopicBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\TopicBrowser.Designer.cs">
+    <Compile Include="Controls\Browsers\TopicBrowser.Designer.cs">
       <DependentUpon>TopicBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MainBrowser.cs">
+    <Compile Include="Controls\Browsers\MainBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\MainBrowser.designer.cs">
+    <Compile Include="Controls\Browsers\MainBrowser.designer.cs">
       <DependentUpon>MainBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Splash.cs">
@@ -149,27 +154,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\DisplayLL.resx">
+    <EmbeddedResource Include="Controls\Browsers\FreeSearch.resx">
+      <DependentUpon>FreeSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Content\DisplayLL.resx">
       <DependentUpon>DisplayLL.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LectureBrowser.resx">
+    <EmbeddedResource Include="Controls\Browsers\LectureBrowser.resx">
       <DependentUpon>LectureBrowser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\InstructorMenu.resx">
+    <EmbeddedResource Include="Controls\Content\LinkedList.resx">
+      <DependentUpon>LinkedList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Menus\InstructorMenu.resx">
       <DependentUpon>InstructorMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\LL.resx">
+    <EmbeddedResource Include="Controls\Content\LL.resx">
       <DependentUpon>LL.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\RetrieveLL.resx">
+    <EmbeddedResource Include="Controls\Content\RetrieveLL.resx">
       <DependentUpon>RetrieveLL.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Slides.resx">
+    <EmbeddedResource Include="Controls\Content\Slides.resx">
       <DependentUpon>Slides.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -185,19 +198,19 @@
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Profile.resx">
+    <EmbeddedResource Include="Controls\Admin\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\StudentMenu.resx">
+    <EmbeddedResource Include="Controls\Menus\StudentMenu.resx">
       <DependentUpon>StudentMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TopicBrowser.resx">
+    <EmbeddedResource Include="Controls\Browsers\TopicBrowser.resx">
       <DependentUpon>TopicBrowser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\MainBrowser.resx">
+    <EmbeddedResource Include="Controls\Browsers\MainBrowser.resx">
       <DependentUpon>MainBrowser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -215,10 +228,6 @@
     <ProjectReference Include="..\EZTutor.Data.Remote\EZTutor.Data.Remote.csproj">
       <Project>{C11720D3-49D6-4B55-81CE-7C97AB200C99}</Project>
       <Name>EZTutor.Data.Remote</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NHibernate\NHibernate-2.0.csproj">
-      <Project>{5909BFE7-93CF-4E5F-BE22-6293368AF01D}</Project>
-      <Name>NHibernate-2.0</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

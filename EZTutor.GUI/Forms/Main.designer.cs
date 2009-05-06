@@ -1,4 +1,4 @@
-using EZTutor.GUI.Controls;
+using EZTutor.GUI.Controls.Menus;
 
 namespace EZTutor.GUI.Forms
 {
@@ -31,7 +31,7 @@ namespace EZTutor.GUI.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.groupBox1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.menuPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,24 +62,24 @@ namespace EZTutor.GUI.Forms
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.studentMenu1 = new EZTutor.GUI.Controls.StudentMenu();
-            this.instructorMenu1 = new EZTutor.GUI.Controls.InstructorMenu();
-            this.groupBox1.SuspendLayout();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.studentMenu1 = new EZTutor.GUI.Controls.Menus.StudentMenu();
+            this.instructorMenu1 = new EZTutor.GUI.Controls.Menus.InstructorMenu();
+            this.menuPanel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // menuPanel
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.menuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.studentMenu1);
-            this.groupBox1.Controls.Add(this.instructorMenu1);
-            this.groupBox1.Location = new System.Drawing.Point(-1, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(198, 483);
-            this.groupBox1.TabIndex = 0;
+            this.menuPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.menuPanel.Controls.Add(this.studentMenu1);
+            this.menuPanel.Controls.Add(this.instructorMenu1);
+            this.menuPanel.Location = new System.Drawing.Point(-1, 28);
+            this.menuPanel.Name = "menuPanel";
+            this.menuPanel.Size = new System.Drawing.Size(198, 483);
+            this.menuPanel.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -90,7 +90,7 @@ namespace EZTutor.GUI.Forms
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(601, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(878, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -317,15 +317,15 @@ namespace EZTutor.GUI.Forms
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // panel1
+            // contentPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.contentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(194, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 484);
-            this.panel1.TabIndex = 4;
+            this.contentPanel.Location = new System.Drawing.Point(194, 27);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(684, 484);
+            this.contentPanel.TabIndex = 4;
             // 
             // studentMenu1
             // 
@@ -339,6 +339,7 @@ namespace EZTutor.GUI.Forms
             // instructorMenu1
             // 
             this.instructorMenu1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.instructorMenu1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.instructorMenu1.Location = new System.Drawing.Point(3, 233);
             this.instructorMenu1.Name = "instructorMenu1";
             this.instructorMenu1.Size = new System.Drawing.Size(184, 263);
@@ -348,15 +349,15 @@ namespace EZTutor.GUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 508);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(878, 508);
+            this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuPanel);
             this.Name = "Main";
             this.Text = "EZ Tutor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
-            this.groupBox1.ResumeLayout(false);
+            this.menuPanel.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -366,7 +367,7 @@ namespace EZTutor.GUI.Forms
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel groupBox1;
+        private System.Windows.Forms.FlowLayoutPanel menuPanel;
         private StudentMenu studentMenu1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -398,7 +399,7 @@ namespace EZTutor.GUI.Forms
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel contentPanel;
         private InstructorMenu instructorMenu1;
     }
 }

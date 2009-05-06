@@ -1,4 +1,4 @@
-namespace Project
+namespace EZTutor.GUI.Controls.Content
 {
     partial class RetrieveLL
     {

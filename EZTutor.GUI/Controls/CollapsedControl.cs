@@ -20,7 +20,7 @@ namespace EZTutor.GUI.Controls
         {
             while (Height > 0)
             {
-                Height--;
+                Height -= 3;
             }
         }
 
@@ -28,7 +28,7 @@ namespace EZTutor.GUI.Controls
         {
             while (Height < height)
             {
-                Height++;
+                Height += 3;
             }
         }
     }

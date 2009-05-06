@@ -9,12 +9,11 @@ using System.Windows.Forms;
 using EZTutor.Data.Remote.Datasets;
 using EZTutor.Data.Remote.Datasets.EZTutorDataSetTableAdapters;
 using EZTutor.Data.Remote.Entities;
-using EZTutor.Data.Remote.Domain;
+//using EZTutor.Data.Remote.Domain;
 using EZTutor.GUI.Arguments;
 using EZTutor.GUI.Enums;
-using NHibernate;
 
-namespace EZTutor.GUI.Controls
+namespace EZTutor.GUI.Controls.Browsers
 {
     public partial class TopicBrowser : CollapsedControl
     {
@@ -38,7 +37,6 @@ namespace EZTutor.GUI.Controls
             TopicsTableAdapter topicsTableAdapter = new TopicsTableAdapter();
 
             EZTutorDataSet.TopicsDataTable topics = topicsTableAdapter.GetData();
-            //dataGridView1.DataSource = topicsTableAdapter.GetData();
 
             TreeNode parent = treeView1.Nodes.Add("Topics");
             foreach (EZTutorDataSet.TopicsRow topic in topics)

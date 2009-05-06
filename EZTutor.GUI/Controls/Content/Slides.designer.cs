@@ -1,4 +1,4 @@
-namespace EZTutor.GUI
+namespace EZTutor.GUI.Controls.Content
 {
     partial class Slides
     {

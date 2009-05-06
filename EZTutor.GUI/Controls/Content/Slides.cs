@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 
-namespace EZTutor.GUI
+namespace EZTutor.GUI.Controls.Content
 {
     public partial class Slides : UserControl 
     {
@@ -182,7 +182,7 @@ namespace EZTutor.GUI
                 if (y == 42)
                     label12.Visible = false; 
                 if (y != 43)
-                label2.Location = new System.Drawing.Point(x, ++y);
+                    label2.Location = new System.Drawing.Point(x, ++y);
             }
             if (y == 43)
             {

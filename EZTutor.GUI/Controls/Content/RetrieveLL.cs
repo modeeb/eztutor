@@ -6,10 +6,11 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project
+namespace EZTutor.GUI.Controls.Content
 {
-    public partial class DisplayLL : UserControl
+    public partial class RetrieveLL : UserControl
     {
+
         Label label1 = new Label();
         Label label2 = new Label();
         Label label3 = new Label();
@@ -23,13 +24,51 @@ namespace Project
         Label label11 = new Label();
         Label label12 = new Label();
         Label label13 = new Label();
-        Label label14 = new Label(); 
+        Label label14 = new Label();
         Random r = new Random();
         int node = 1;
 
-        public DisplayLL()
+        public RetrieveLL()
         {
             InitializeComponent();
+        }
+
+        private void labelCur(Label mylabel)
+        {
+            try
+            {
+                int x = mylabel.Location.X;
+                int y = mylabel.Location.Y - mylabel.Height;
+                this.label14.AutoSize = true;
+                this.label14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+                this.label14.ForeColor = System.Drawing.Color.Red;
+                this.label14.Location = new System.Drawing.Point(x, y);
+                this.label14.Name = "label14";
+                this.label14.Text = "Cur";
+                this.Controls.Add(label14);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void labelNull(Label mylabel)
+        {
+            try
+            {
+                int y = (mylabel.Location.X + mylabel.Width) - 3;
+                this.label12.AutoSize = true;
+                this.label12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+                this.label12.Location = new System.Drawing.Point(y, 43);
+                this.label12.Name = "label12";
+                this.label12.Text = "NULL";
+                this.Controls.Add(label12);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void arrow1()
@@ -140,28 +179,13 @@ namespace Project
             }
         }
 
-        private void labelNull(Label mylabel)
-        {
-            try
-            {
-                int y = (mylabel.Location.X + mylabel.Width) - 3;
-                this.label12.AutoSize = true;
-                this.label12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-                this.label12.Location = new System.Drawing.Point(y, 43);
-                this.label12.Name = "label12";
-                this.label12.Text = "NULL";
-                this.Controls.Add(label12);
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                if (textBox2.Text == "")
+                    return;
+
                 if (button1.Text == "Replay")
                 {
                     this.Controls.Remove(label1);
@@ -180,15 +204,16 @@ namespace Project
                     this.Controls.Remove(label14);
                     label16.Text = "Output:";
                     timer1.Enabled = true;
-                    node = 1; 
+                    node = 1;
                 }
+
                 this.label1.AutoSize = true;
                 this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
                 this.label1.Location = new System.Drawing.Point(26, 43);
                 this.label1.Name = "label1";
                 this.label1.Text = "Head";
-                this.Controls.Add(label1);                                           
+                this.Controls.Add(label1);
                 arrow1();
 
                 this.label2.AutoSize = true;
@@ -237,7 +262,7 @@ namespace Project
                 arrow6();
 
                 labelNull(label13);
-                timer1.Enabled = true;                  
+                timer1.Enabled = true;
             }
             catch (Exception ee)
             {
@@ -248,14 +273,18 @@ namespace Project
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
-            {                
+            {
                 label16.Visible = true;
                 node++;
                 switch (node)
                 {
                     case 2:
                         labelCur(label2);
-                        label16.Text += " " + label2.Text;
+                        if (textBox2.Text == label2.Text)
+                        {
+                            label16.Text += " True";
+                            timer1.Enabled = false; 
+                        }
                         break;
                     case 3:
                         labelCur(label3);
@@ -271,33 +300,13 @@ namespace Project
                         break;
                     case 6:
                         labelCur(label11);
-                        label16.Text += ", " + label11.Text;                        
+                        label16.Text += ", " + label11.Text;
                         button1.Text = "Replay";
-                        timer1.Enabled=false; 
+                        timer1.Enabled = false;
                         break;
                     default:
                         break;
-                }          
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void labelCur(Label mylabel)
-        {
-            try
-            {
-                int x = mylabel.Location.X;
-                int y = mylabel.Location.Y - mylabel.Height;
-                this.label14.AutoSize = true;
-                this.label14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-                this.label14.ForeColor = System.Drawing.Color.Red;
-                this.label14.Location = new System.Drawing.Point(x, y);
-                this.label14.Name = "label14";
-                this.label14.Text = "Cur";
-                this.Controls.Add(label14);
+                }
             }
             catch (Exception ee)
             {
