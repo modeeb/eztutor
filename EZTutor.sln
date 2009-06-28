@@ -1,8 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZTutor", "EZTutor\EZTutor.csproj", "{7F62BEA4-6DC1-424F-960C-C63D060A28DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57AED701-D4C0-42E4-A998-097B4CC9ED0C}"
+	ProjectSection(SolutionItems) = preProject
+		Remote.sql = Remote.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
